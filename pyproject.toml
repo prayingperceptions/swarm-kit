@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swarm-kit"
+version = "0.1.0"
+description = "Don't orchestrate. Fan out, judge, converge. A local-first swarm framework for AI agents."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "prayingperceptions" }]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+include = ["swarm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
